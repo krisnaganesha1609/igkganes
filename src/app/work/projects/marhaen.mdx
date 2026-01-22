@@ -1,0 +1,121 @@
+---
+title: "Marhaen Digital Cashier"
+summary: Marhaen Digital Cashier is a multi-role mobile POS and backoffice application built with Flutter and GetX. The system supports role-based authentication and ingredient-level inventory management to ensure accurate stock control and daily operations.
+publishedAt: 2025-07-20
+images: 
+    - "/images/projects/marhaen/MarhaenWork.png"
+team:
+    - name: "I Gede Krisna Ganesha Widhiarta"
+      role: "Assistant Mobile Developer"
+      avatar: "/images/ganesh.jpeg"
+      linkedIn: "https://www.linkedin.com/in/igkganes/"
+    - name: "Ziyad Fathir Al Biaroza"
+      role: "Lead UI/UX Designer"
+      avatar: "/images/ziyad.png"
+      linkedIn: "https://www.linkedin.com/in/ziyad-fathir-al-biaroza/"
+    - name: "Muhammad Gavin Arasyi"
+      role: "Lead Mobile Developer"
+      avatar: ""
+      linkedIn: "https://www.linkedin.com/in/muhammad-gavin-arasyi-23748a28a/"
+    - name: "Muhammad Hendika Putra"
+      role: "Assistant Mobile Developer"
+      avatar: ""
+      linkedIn: "https://www.linkedin.com/in/muhhendikaputra/"
+---
+
+# Marhaen Digital Cashier — Multi-Role POS & Backoffice App
+
+**Marhaen Digital Cashier** is a mobile-based point-of-sale and backoffice application designed to support daily operational workflows in small-to-medium food and beverage businesses. While conceptually similar to NEVMOCK (RASA KOPI Backoffice), this application introduces **authentication, role hierarchy, and more granular inventory control**.
+
+The system focuses on reliability, role separation, and accurate stock tracking through ingredient-based calculations.
+
+---
+
+## Project scope
+- Application type: Mobile POS & Backoffice  
+- Domain: Food & Beverage Operations  
+- Target users: Café and restaurant staff  
+- Focus: Role-based workflows and inventory accuracy  
+
+---
+
+## Supported roles
+
+### Junior Staff
+- Create and process customer orders  
+- View menu availability  
+- Limited access to operational data  
+
+### Senior Staff
+- All Junior Staff permissions  
+- Manage orders and order status  
+- Update menu items and pricing  
+- Monitor ingredient stock levels  
+
+### Owner
+- Full system access  
+- View business analytics and summaries  
+- Manage users and role assignments  
+- Oversee inventory and supply management  
+
+---
+
+## Core features
+- **Multi-role authentication**
+  - Login system with role-based access control
+- **POS & Order Management**
+  - Create, update, and track customer orders
+- **Menu Management**
+  - CRUD operations for menu items
+- **Ingredient-Based Inventory**
+  - Define ingredients per menu item
+  - Automatic stock deduction based on orders
+  - Supply stock monitoring and alerts
+- **Analytics Dashboard**
+  - Sales summary and operational insights
+- **User Management**
+  - Role assignment and access control
+
+---
+
+## Tech stack
+- **Mobile:** Flutter  
+- **State Management & Navigation:** GetX  
+- **Architecture:** Feature-based modular structure  
+- **Local & Remote Data:** REST API integration  
+
+---
+
+## Architecture overview
+1. **Presentation Layer**
+   - Flutter UI
+   - GetX controllers for state and navigation
+2. **Application Logic**
+   - Role-based feature gating
+   - Order and inventory calculation logic
+3. **Data Layer**
+   - API services for authentication, orders, and inventory
+   - Models representing menu, ingredients, and supply stock
+
+GetX is used to provide fast iteration, simplified state handling, and centralized navigation.
+
+---
+
+## Technical challenges
+- Designing ingredient-based stock deduction logic  
+- Preventing negative stock during concurrent orders  
+- Managing UI complexity across multiple user roles  
+- Balancing simplicity with feature richness in POS workflows  
+
+---
+
+## Impact & lessons learned
+- Role separation improves operational clarity and reduces user errors  
+- Ingredient-level inventory significantly increases stock accuracy  
+- GetX enables rapid development but requires discipline to maintain scalability  
+
+---
+
+## Credits
+- Role: Mobile Application Developer  
+- Project type: Private / Internal Application  

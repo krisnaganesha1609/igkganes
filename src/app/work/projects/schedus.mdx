@@ -1,0 +1,80 @@
+---
+title: SCHEDUS — Schedule & Rooms
+summary: SCHEDUS is a Flutter-based mobile application designed to manage class schedules and room data at SMKN 4 Bandung, helping administrators and teachers reduce scheduling conflicts.
+link: gitlab.com/igkganes/schedus_app
+publishedAt: "2023-03-15"
+team:
+    - name: "I Gede Krisna Ganesha Widhiarta"
+      role: "Fullstack Developer"
+      avatar: "/images/ganesh.jpeg"
+      linkedIn: "https://www.linkedin.com/in/igkganes/"
+---
+
+# SCHEDUS — Schedule and Room Management
+
+**SCHEDUS** is a mobile application built to digitalize academic schedules and classroom data. The system enables efficient schedule input, room management, and conflict handling, supported by a web-based CMS for administrators.
+
+---
+
+## Highlights
+- Focused on data accuracy and operational reliability  
+- Realtime synchronization with Firebase  
+- Web-based CMS for centralized schedule and room management  
+
+---
+
+## Key features
+- Class schedule management by class and teacher  
+- Room inventory management (capacity, facilities, availability)  
+- Schedule conflict detection and administrative notifications  
+- CSV import/export for schedule data  
+- Admin dashboard built with React and Firebase  
+
+---
+
+## Tech stack
+- **Mobile:** Flutter  
+- **Backend & Database:** Firebase (Auth, Firestore / Realtime Database)  
+- **CMS / Admin Panel:** React + Firebase  
+- **Data Interoperability:** CSV import/export support  
+
+Repository: [gitlab.com/igkganes/schedus_app](https://gitlab.com/igkganes/schedus_app)
+
+---
+
+## Architecture overview
+1. **Flutter client** — provides schedule access for teachers and students.  
+2. **Firebase backend** — manages authentication, scheduling data, and realtime updates.  
+3. **React CMS** — web dashboard for administrators to manage schedules and room data.
+
+---
+
+## Mockups / Screenshots
+
+[![](/images/projects/schedus/1.jpg)](/images/projects/schedus/1.jpg)  
+[![](/images/projects/schedus/2.jpg)](/images/projects/schedus/2.jpg)  
+[![](/images/projects/schedus/3.jpg)](/images/projects/schedus/3.jpg)  
+[![](/images/projects/schedus/4.jpg)](/images/projects/schedus/4.jpg)  
+[![](/images/projects/schedus/5.jpg)](/images/projects/schedus/5.jpg)
+
+> Screens display schedule views, room details, schedule forms, and admin dashboard interfaces.
+
+---
+
+## Run locally (quick start)
+> Check the repository README for environment variables and setup details.
+
+```bash
+# Clone repository
+git clone https://gitlab.com/igkganes/schedus_app.git
+cd schedus_app
+
+# Flutter application
+cd app
+flutter pub get
+flutter run
+
+# CMS (React)
+cd ../cms
+npm install
+npm run dev
