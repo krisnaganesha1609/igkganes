@@ -1,4 +1,4 @@
-import type { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import type { About, Awards, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
@@ -91,7 +91,7 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -371,6 +371,15 @@ const work: Work = {
   // All projects will be listed on the /home and /work routes
 };
 
+const awards: Awards = {
+  path: "/awards",
+  label: "Awards",
+  title: `Awards – ${person.name}`,
+  description: `Awards received by ${person.name}`,
+  // Create new award pages by adding a new .mdx file to app/awards/posts
+  // All projects will be listed on the /home and /work routes
+};
+
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
@@ -407,4 +416,4 @@ const gallery: Gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, blog, work, gallery, awards };

@@ -19,6 +19,7 @@ const baseURL: string = "https://igkganes.vercel.app";
 const routes: RoutesConfig = {
   "/": true,
   "/about": true,
+  "/awards": true,
   "/work": true,
   "/blog": true,
   "/gallery": true,
@@ -33,7 +34,7 @@ const display: DisplayConfig = {
 // Enable password protection on selected routes
 // Set password in the .env file, refer to .env.example
 const protectedRoutes: ProtectedRoutesConfig = {
-  "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
+  // "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
 };
 
 // Import and set font for each variant
@@ -187,10 +188,10 @@ const mailchimp: MailchimpConfig = {
 // default schema data
 const schema: SchemaConfig = {
   logo: "",
-  type: "Organization",
-  name: "Once UI",
+  type: "Personal",
+  name: "igkganes",
   description: home.description,
-  email: "lorant@once-ui.com",
+  email: "igkganes@gmail.com",
 };
 
 // social links
@@ -204,13 +205,13 @@ const sameAs: SameAsConfig = {
 const socialSharing: SocialSharingConfig = {
   display: true,
   platforms: {
-    x: true,
+    x: false,
     linkedin: true,
     facebook: false,
     pinterest: false,
-    whatsapp: false,
+    whatsapp: true,
     reddit: false,
-    telegram: false,
+    telegram: true,
     email: true,
     copyLink: true,
   },

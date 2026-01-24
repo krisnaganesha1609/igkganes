@@ -29,7 +29,7 @@ export async function generateMetadata() {
 export default function Home() {
   return (
     <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center">
-      {/* <Schema
+      <Schema
         as="webPage"
         baseURL={baseURL}
         path={home.path}
@@ -41,7 +41,7 @@ export default function Home() {
           url: `${baseURL}${about.path}`,
           image: `${baseURL}${person.avatar}`,
         }}
-      /> */}
+      />
       <Column fillWidth horizontal="center" gap="m">
         <Column maxWidth="s" horizontal="center" align="center">
           {home.featured.display && (

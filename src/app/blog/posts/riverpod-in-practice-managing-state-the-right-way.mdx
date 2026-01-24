@@ -1,0 +1,73 @@
+---
+title: "Riverpod in Practice: Managing State the Right Way in Flutter"
+summary: "Lessons learned from using Riverpod as a scalable and maintainable state management solution in real Flutter projects."
+publishedAt: "2026-01-24"
+tag: "Flutter Riverpod"
+---
+
+## Why Riverpod?
+
+Riverpod is not just another state management library.  
+It enforces **clear separation between UI and business logic**, which becomes crucial as the app grows.
+
+In my projects, Riverpod helped me avoid tight coupling between widgets and application logic.
+
+---
+
+## Think in State, Not Widgets
+
+A common beginner mistake is treating state as a UI concern.
+
+Instead:
+- UI describes *what to show*
+- Providers describe *what happens*
+
+<CodeBlock
+    marginBottom="16"
+    codes={[
+      {
+        code:
+`final authProvider = StateNotifierProvider<AuthNotifier, AsyncValue<User?>>(
+    (ref) => AuthNotifier(ref.read),
+);`,
+        language: "dart",
+        label: "Dart"
+      }
+    ]}
+/>
+
+This makes state reusable across screens and features.
+
+`ref.watch` vs `ref.read`
+
+One practical rule I follow:
+
+- ref.watch() → UI dependency
+
+- ref.read() → user action / side effect
+
+Misusing `watch` can lead to unnecessary rebuilds and performance issues.
+
+## Prefer `AsyncValue` for Network State
+Handling loading, success, and error manually becomes messy.
+
+<CodeBlock
+    marginBottom="16"
+    codes={[
+      {
+        code:
+`state = const AsyncLoading();
+state = await AsyncValue.guard(() async {
+    return repository.fetchProfile();
+});`,
+        language: "dart",
+        label: "Dart"
+      }
+    ]}
+/>
+
+This pattern keeps state predictable and UI clean.
+
+## Key Takeaways
+Riverpod shines when you treat it as an `architecture tool`, not just a state holder.
+> Good state management reduces cognitive load more than lines of code.

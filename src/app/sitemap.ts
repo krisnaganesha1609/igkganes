@@ -12,6 +12,11 @@ export default async function sitemap() {
     lastModified: post.metadata.publishedAt,
   }));
 
+  const awards = getPosts(["src", "app", "awards", "data"]).map((post) => ({
+    url: `${baseURL}/awards/${post.slug}`,
+    lastModified: post.metadata.publishedAt,
+  }));
+
   const activeRoutes = Object.keys(routesConfig).filter(
     (route) => routesConfig[route as keyof typeof routesConfig],
   );
@@ -21,5 +26,5 @@ export default async function sitemap() {
     lastModified: new Date().toISOString().split("T")[0],
   }));
 
-  return [...routes, ...blogs, ...works];
+  return [...routes, ...blogs, ...works, ...awards];
 }

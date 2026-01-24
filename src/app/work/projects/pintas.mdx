@@ -19,7 +19,6 @@ team:
       role: "Mobile Design Implementor"
       avatar: ""
       linkedIn: "https://www.linkedin.com/in/favjiw/"
-link: gitlab.com/Dittsxa/pintas-app
 ---
 
 # PINTAS — Digital School Library System
@@ -72,23 +71,3 @@ Repository: [gitlab.com/Dittsxa/pintas-app](https://gitlab.com/Dittsxa/pintas-ap
 > Screens show the book catalog, book details, borrowing flow, and basic admin management views.
 
 ---
-
-## Run locally (quick start)
-> Refer to the repository README for exact environment configuration.
-
-```bash
-# Clone repository
-git clone https://gitlab.com/Dittsxa/pintas-app.git
-cd pintas-app
-
-# Flutter application
-cd app
-flutter pub get
-flutter run
-
-# CMS (Laravel)
-cd ../cms
-composer install
-cp .env.example .env
-php artisan migrate
-php artisan serve

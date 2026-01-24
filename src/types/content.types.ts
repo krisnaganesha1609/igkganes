@@ -224,6 +224,12 @@ export interface Blog extends BasePageConfig {}
 export interface Work extends BasePageConfig {}
 
 /**
+ * Awards page configuration.
+ * @description Configuration for the Awards page, including metadata and navigation label.
+ */
+export interface Awards extends BasePageConfig {}
+
+/**
  * Gallery page configuration.
  * @description Configuration for the Gallery page, including metadata, navigation label, and image list.
  */

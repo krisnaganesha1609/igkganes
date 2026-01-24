@@ -1,0 +1,79 @@
+---
+title: "Clean API Integration in Flutter Using Dio"
+summary: "How I structure API communication in Flutter apps using Dio for clarity, reuse, and error control."
+publishedAt: "2026-01-24"
+tag: "Flutter Dio"
+---
+
+## Why Dio?
+
+Dio provides more than HTTP requests.  
+It enables **structured networking**, especially when dealing with authentication, logging, and error handling.
+
+---
+
+## Centralize Your Dio Instance
+
+Avoid creating Dio in multiple places.
+
+<CodeBlock
+    marginBottom="16"
+    codes={[
+      {
+        code:
+`final dio = Dio(
+    BaseOptions(
+        baseUrl: Env.apiBaseUrl,
+        connectTimeout: const Duration(seconds: 10),
+    ),
+);`,
+        language: "dart",
+        label: "Dart"
+      }
+    ]}
+/>
+
+This ensures:
+
+- Consistent headers
+
+- Unified timeout rules
+
+- Easier debugging
+
+## Use Interceptors Wisely
+
+Interceptors are ideal for:
+
+- Injecting authorization tokens
+
+- Logging requests & responses
+
+- Normalizing API errors
+
+This prevents repetitive try-catch blocks across repositories.
+
+## Repository Layer Matters
+
+UI should never talk to Dio directly.
+
+```
+UI → Provider → Repository → Dio
+```
+
+Benefits:
+
+- Easier testing
+
+- Cleaner widgets
+
+- Clear responsibility boundaries
+
+## Error Handling Philosophy
+
+Do not expose raw Dio errors to UI.
+Translate them into domain-friendly messages inside the repository.
+
+```
+APIs fail, but good apps fail gracefully.
+```

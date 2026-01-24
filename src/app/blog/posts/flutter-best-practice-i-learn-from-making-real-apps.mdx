@@ -1,0 +1,58 @@
+---
+title: "Flutter Best Practices I Learned from Building Real Apps"
+summary: "Architectural and coding principles that helped me write Flutter code that stays readable, testable, and scalable."
+publishedAt: "2026-01-24"
+tag: "Flutter Architecture"
+---
+
+## Start Simple, Design for Growth
+
+Early over-engineering slows progress.  
+But ignoring structure causes painful refactors later.
+
+The balance:
+- Simple feature-first code
+- Clear boundaries from day one
+
+---
+
+## Separate Concerns Relentlessly
+
+If a widget:
+- Fetches data
+- Parses response
+- Manages business rules  
+
+…it’s doing too much.
+
+Widgets should focus on **layout and interaction**, nothing else.
+
+---
+
+## Naming Is Architecture
+
+Poor naming hides intent.
+
+Good naming:
+- Makes code self-documenting
+- Reduces the need for comments
+- Helps future contributors (including future you)
+
+---
+
+## Avoid “Quick Fix” Patterns
+
+If something feels hacky, it probably is.
+
+Temporary solutions tend to become permanent technical debt.
+
+> **The cost of refactoring grows exponentially with delay.**
+
+---
+
+## Final Reflection
+
+Clean Flutter code is not about perfection.  
+It’s about **clarity, consistency, and accountability**.
+
+> **Readable code is a form of respect, for teammates and for yourself.**

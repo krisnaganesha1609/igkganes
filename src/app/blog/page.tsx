@@ -1,7 +1,6 @@
 import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
-import { Mailchimp } from "@/components";
 import { Posts } from "@/components/blog/Posts";
-import { baseURL, blog, person, newsletter } from "@/resources";
+import { baseURL, blog, person } from "@/resources";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -29,8 +28,18 @@ export default function Blog() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Heading marginBottom="l" variant="heading-strong-xl" marginLeft="24">
+      <Heading variant="heading-strong-xl" marginLeft="24">
         {blog.title}
+      </Heading>
+      <Heading as="h2" variant="body-default-xs" marginBottom="32" marginLeft="24">
+        You can also check my old blogspot on{" "}
+        <a
+          href="https://scattzz.blogspot.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          scattzz.blogspot.com
+        </a>
       </Heading>
       <Column fillWidth flex={1} gap="40">
         <Posts range={[1, 1]} thumbnail />
