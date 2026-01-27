@@ -50,10 +50,10 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/images/og/home.jpg",
+  image: "/images/og/about.png",
   label: "Home",
   title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
+  description: `Welcome! This is the portfolio website showcasing my work as a ${person.role}. Explore my projects, blog posts, and get to know more about me.`,
   headline: <>Elegance. Clarity. Meaningful.</>,
   featured: {
     display: true,
